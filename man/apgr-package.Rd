@@ -16,7 +16,7 @@ apgr(A,b,lambda,gamma,t,alpha,beta,max_iteration,eps,proximal,method,step)
 
 \item{lambda}{if h(x) is prox_l1 or prox_elsticnet, lambda is the coefficient of 1-norm
        h(x) = prox_l1(v,t,lambda) = lambda*t*1-norm(x)
-       h(x) = prox_elsticnet(v,t,lambda,gamma) = t*(lambda*[(1-gamma)*1-norm(x)+gamma*2-norm(x)])}
+       h(x) = prox_elsticnet(v,t,lambda,gamma) = t*(lambda*[(gamma)*1-norm(x)+(1-gamma)*2-norm(x)])}
 
 \item{gamma}{the ratio mixture of 1-norm and 2-norm}
 
@@ -61,11 +61,11 @@ A list with \code{x}, the solution of the problem: \deqn{min_x (f(x)
 }
 \examples{
 # Solve a Lasso problem:
-# min_x 1/2 norm( A\%*\%x - b )^2 + lambda ||x||_1
+# min_x 1/2 norm( A\%*\%x - b )^2 + lambda (gamma*||x||_1+(1-gamma)*||x||_2)
 n <- 50
 m <- 20
 lambda <- 1
 A <- matrix(rnorm(m*n), nrow=n)
 b <- rnorm(n)
-r <- apgr(A,b,lambda,method=1,proximal=2,step=2) 
+r <- apgr(A = A,b = b,lambda = 0.01,gamma = 1,t = 0.0039,alpha = 1.01,beta = 0.5,max_iteration = 2000,eps = 1e-6,method=3,proximal=1,step=1) 
 }
