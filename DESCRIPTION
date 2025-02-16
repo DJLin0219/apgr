@@ -1,0 +1,15 @@
+Package: apgr
+Type: Package
+Title: Accelerated Proximal Gradient Descent Optimization
+Version: 1.0
+Date: 2021-01-11
+Author: Dianjun Lin, Weiyi Peng, Yuyue Ren
+Maintainer: <lindianjun0219@ruc.edu.cn>
+Description: This package implements a general routine for minimization of a
+    composite function with accelerated proximal gradient, as well as some
+    examples of such functions useful in statistics and machine learning.
+License: Artistic-2.0
+Imports: Rcpp (>= 1.0.5),RcppArmadillo
+LinkingTo: Rcpp, RcppArmadillo
+NeedsCompilation: yes
+Packaged: 2021-01-12 06:42:50 UTC; apple
