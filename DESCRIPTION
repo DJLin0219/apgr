@@ -1,0 +1,19 @@
+Package: apgr
+Title: Accelerated Proximal Gradient Descent Optimization
+Version: 1.0
+Authors@R: c(
+    person("Dianjun", "Lin", email = "djlin0219@gmail.com", role = c("aut", "cre")),
+    person("Weiyi", "Peng", role = "aut"),
+    person("Yuyue", "Ren", role = "aut")
+)
+Description: Implements a general routine for minimizing composite functions using
+    accelerated proximal gradient descent. Includes examples useful in statistics
+    and machine learning.
+License: Artistic-2.0
+Imports: 
+    Rcpp (>= 1.0.5),
+    RcppArmadillo
+LinkingTo: 
+    Rcpp,
+    RcppArmadillo
+NeedsCompilation: yes
