@@ -15,8 +15,8 @@ apgr(A,b,lambda,gamma,t,alpha,beta,max_iteration,eps,proximal,method,step)
 \item{b}{m*1 vector in g(x)}
 
 \item{lambda}{if h(x) is prox_l1 or prox_elsticnet, lambda is the coefficient of 1-norm
-       h(x) = prox_l1(v,t,lambda) = lambda*t*1-norm(x)
-       h(x) = prox_elsticnet(v,t,lambda,gamma) = t*(lambda*[(1-gamma)*1-norm(x)+gamma*2-norm(x)])}
+       \[h(x) = \text{prox_{l1}}(v,t,lambda) = lambda*t*1-norm(x)\]
+       \[ h(x) = \text{prox_{elsticnet}}(v,t,lambda,gamma) = t*(lambda*[(1-gamma)*1-norm(x)+gamma*2-norm(x)]) \]}
 
 \item{gamma}{the ratio mixture of 1-norm and 2-norm}
 
@@ -52,12 +52,12 @@ apgr(A,b,lambda,gamma,t,alpha,beta,max_iteration,eps,proximal,method,step)
 \description{
 This function implements an accelerated proximal gradient method.
 It solves: \deqn{min_x (g(x) + h(x)), x \in
-R^dim_x} where \eqn{g} is smooth, convex and \eqn{h} is non-smooth, convex
+R^{\text{dim_x}}} where \eqn{g} is smooth, convex and \eqn{h} is non-smooth, convex
 but simple in that we can easily evaluate the proximal operator of h.
 }
 \value{
 A list with \code{x}, the solution of the problem: \deqn{min_x (f(x)
-  + h(x)), x \in R^dim_x ,}.
+  + h(x)), x \in R^{\text{dim_x}} ,}.
 }
 \examples{
 # Solve a Lasso problem:
