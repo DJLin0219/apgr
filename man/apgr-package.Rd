@@ -52,12 +52,12 @@ apgr(A,b,lambda,gamma,t,alpha,beta,max_iteration,eps,proximal,method,step)
 \description{
 This function implements an accelerated proximal gradient method.
 It solves: \deqn{min_x (g(x) + h(x)), x \in
-R^{\text{dim_x}}} where \eqn{g} is smooth, convex and \eqn{h} is non-smooth, convex
+R^{{dim_x}}} where \eqn{g} is smooth, convex and \eqn{h} is non-smooth, convex
 but simple in that we can easily evaluate the proximal operator of h.
 }
 \value{
 A list with \code{x}, the solution of the problem: \deqn{min_x (f(x)
-  + h(x)), x \in R^{\text{dim_x}} ,}.
+  + h(x)), x \in R^{{dim_x}} ,}.
 }
 \examples{
 # Solve a Lasso problem:
