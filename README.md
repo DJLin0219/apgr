@@ -10,6 +10,10 @@
 
 where \( g(x) \) is a smooth, convex function, and \( h(x) \) is a non-smooth, convex function with an easily computable proximal operator.
 
+This package was developed as part of an optimization course project at **Renmin University of China, Institute of Statistics and Big Data**.
+
+---
+
 ## Installation
 
 You can install the `apgr` package directly from GitHub using the `devtools` package:
